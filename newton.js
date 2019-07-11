@@ -8,7 +8,6 @@ const p = function(x){
     return value
 }
 
-
 let x = [];
 x.push(2);
 
@@ -20,7 +19,6 @@ for(i=0;i<2;i++){
     x.push(temp)
     
 }
-
 
 console.log(x)
 

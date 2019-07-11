@@ -20,8 +20,6 @@ if(f(a)*f(b)<0){
             a = xns
             xns = calXNS(a,b)
         }
-        
-    
     }
 }
 
