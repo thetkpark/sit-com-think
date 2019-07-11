@@ -18,7 +18,7 @@ while(1){
     const temp = x[i] - (f(x[i]) / p(x[i]))
     x.push(temp)
     
-    if(Math.abs(x[i] - x[i+1] == 0)) break;
+    if(Math.abs(x[i]) - Math.abs(x[i+1]) == 0) break;
     i++;
 }
 

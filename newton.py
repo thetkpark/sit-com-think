@@ -13,8 +13,8 @@ i = 0
 while 1:
     temp = x[i] - (f(x[i]) / p(x[i]))
     x.append(temp)
-    if(abs(x[i] - x[i+1]) == 0):
+    if( abs(x[i]) - abs(x[i+1]) == 0):
         break
     i = i+1
-    
+
 print(x[i+1])
