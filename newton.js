@@ -11,16 +11,18 @@ const p = function(x){
 let x = [];
 x.push(2);
 
-let i;
+let i=0;
 
-for(i=0;i<2;i++){
-
+while(1){
+    
     const temp = x[i] - (f(x[i]) / p(x[i]))
     x.push(temp)
     
+    if(Math.abs(x[i] - x[i+1] == 0)) break;
+    i++;
 }
 
-console.log(x)
+console.log(x[i+1])
 
 
 
