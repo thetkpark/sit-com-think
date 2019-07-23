@@ -8,8 +8,8 @@ public class sumRange {
     }
 
     public static void main (String[] args) {
-        int re = sumOfRange(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
-        System.out.println(re);
+        int result = sumOfRange(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+        System.out.println(result);
     }
     
 }

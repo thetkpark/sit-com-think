@@ -1,4 +1,4 @@
-def sumRange(a,b):
+def sumRange():
     low = int(input("Lowerbound: "))
     up = int(input("Upperbound: "))
     
@@ -7,4 +7,4 @@ def sumRange(a,b):
         result+=x
     return result
 
-print(sumRange(1,100))
+print(sumRange())
