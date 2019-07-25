@@ -2,32 +2,58 @@ public class listPrime{
 
     public static void listPrimeSieve(int arraySize){
         arraySize=arraySize+1;
-        int[] A = new int[arraySize];
+        boolean[] A = new boolean[arraySize];
         int i, j;
         
-        // for(i=0;i<arraySize;i++){
-        //     A[i]=0;
-        // }
-        
         for (i = 2; i < arraySize; i++)
-            A[i] = 1;
+            A[i] = true;
         
-        for (i=2;i*i<=arraySize;i++) {
-            if(A[i]==0) continue;
-            for(j=2;j<arraySize;j++){
+        for (i=2;i<arraySize;i++) {
+            if(A[i]==false) continue;
+            for(j=2;i*j<arraySize;j++){
                 
-                if(j%i==0&&j!=i){
-                    A[j]=0;
-                }
+                A[i*j] = false;
                 
             }
         }
+        int count = 1;
+        for (i = 2; i < arraySize; i++){
+            if(A[i]){
+                System.out.print(i + " ");
+                count++;
+            }
+            if(count==11) {
+                System.out.println("");
+                count = 1;
+            }
+        }
         
-        for (i = 2; i < arraySize; i++)
-            if(A[i]==1)
-            System.out.println(i + " ");
-        
-        
+    }
+
+    public static void listPrimeSieve_back (int arraySize){
+        arraySize=arraySize+1;
+        boolean[] A = new boolean[arraySize];
+        int i, j;
+
+        for (i=2;i<arraySize;i++) {
+            if(A[i]==false) continue;
+            for(j=2;i*j<arraySize;j++){
+                
+                A[i*j] = true;
+                
+            }
+        }
+        int count = 1;
+        for (i = 2; i < arraySize; i++){
+            if(!A[i]){
+                System.out.print(i + " ");
+                count++;
+            }
+            if(count==11) {
+                System.out.println("");
+                count = 1;
+            }
+        }
     }
 
     public static void listPrime (int n){
@@ -50,6 +76,6 @@ public class listPrime{
         int n = Integer.parseInt(args[0]);
         listPrimeSieve(n);
         //listPrime(n);
-
+        //listPrimeSieve_back(n);
     }
 }
