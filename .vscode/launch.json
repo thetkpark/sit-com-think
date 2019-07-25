@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - listPrime",
+            "request": "launch",
+            "mainClass": "listPrime",
+            "projectName": "sit-com-think_3f5cfaf"
+        }
+    ]
+}

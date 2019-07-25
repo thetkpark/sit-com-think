@@ -5,27 +5,27 @@ public class listPrime{
         int[] A = new int[arraySize];
         int i, j;
         
-        for(i=0;i<arraySize;i++){
-            A[i]=0;
-        }
-            
+        // for(i=0;i<arraySize;i++){
+        //     A[i]=0;
+        // }
         
         for (i = 2; i < arraySize; i++)
             A[i] = 1;
         
         for (i=2;i*i<=arraySize;i++) {
+            if(A[i]==0) continue;
             for(j=2;j<arraySize;j++){
                 
                 if(j%i==0&&j!=i){
                     A[j]=0;
                 }
                 
-                }
+            }
         }
         
         for (i = 2; i < arraySize; i++)
             if(A[i]==1)
-            System.out.print(i + " ");
+            System.out.println(i + " ");
         
         
     }
@@ -49,7 +49,7 @@ public class listPrime{
     public static void main (String[] args){
         int n = Integer.parseInt(args[0]);
         listPrimeSieve(n);
-        listPrime(n);
+        //listPrime(n);
 
     }
 }
