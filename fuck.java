@@ -57,6 +57,23 @@ public class fuck {
     if(one||four) return true;
     return false;
   }
+
+  public static int[] notAlone(int[] nums, int val) {
+    int[] result = new int[nums.length];
+    for(int i=0;i<nums.length;i++){
+      if(nums[i]==val){
+        if(nums[i-1]!=val && nums[i+1]!=val){
+          int bigger;
+          if(nums[i-1]>=nums[i+1]) bigger = nums[i-1];
+          else bigger=nums[i+1];
+          result[i] = bigger;
+          continue;
+        }
+        result[i] = nums[i];
+      }
+    }
+  }
+  
   
     
 
