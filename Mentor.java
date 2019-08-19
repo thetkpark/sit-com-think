@@ -35,10 +35,12 @@ public class Mentor {
         System.out.println(n+n+x+ ++x);
     }
 
-
-        
-    public static void main (String[] args){
+    public static void q5(){
         byte a = 100;
         System.out.println((byte) (a+100));
+    }
+        
+    public static void main (String[] args){
+        
     }
 }
